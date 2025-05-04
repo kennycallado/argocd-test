@@ -6,9 +6,8 @@ metadata:
   namespace: argocd-test
   annotations:
     spec.ingressClassName: traefic
-    cert-manager.io/issuer: webslab-issuer
+    cert-manager.io/issuer: argocd-test-issuer # TODO: change
     traefic.ingress.kubernetes.io/router.tls: "true"
-    traefik.ingress.kubernetes.io/router.middlewares: webslab-redirect@kubernetescrd
 
 spec:
   tls:
