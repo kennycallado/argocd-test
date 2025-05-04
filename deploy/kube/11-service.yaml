@@ -11,4 +11,4 @@ spec:
       port: 80
 
   selector:
-    app: nginx-test-app
+    app: argocd-test-app
