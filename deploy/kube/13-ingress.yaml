@@ -6,7 +6,7 @@ metadata:
   name: argocd-test-ing
   annotations:
     spec.ingressClassName: traefic
-    cert-manager.io/issuer: argocd-test-issue
+    cert-manager.io/issuer: argocd-test-issuer
     traefic.ingress.kubernetes.io/router.tls: "true"
 
 spec:
