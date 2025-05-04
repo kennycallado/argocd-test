@@ -4,7 +4,6 @@ kind: Issuer
 
 metadata:
   name: argocd-test-issuer
-  namespace: argocd-test
 
 spec:
   acme:
