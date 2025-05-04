@@ -3,12 +3,11 @@ apiVersion: bitnami.com/v1alpha1
 kind: SealedSecret
 
 metadata:
+  name: argocd-test-screts
+  namespace: argocd-test
+  creationTimestamp: null
   annotations:
     sealedsecrets.bitnami.com/namespace-wide: "true"
-  creationTimestamp: null
-
-  name: email
-  namespace: argocd-test
 
 spec:
   template:
