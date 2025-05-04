@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: argocd-test-ing
+  annotations:
+    spec.ingressClassName: traefic
+    cert-manager.io/issuer: webslab-issuer
+    traefic.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.middlewares: webslab-redirect@kubernetescrd
+
+spec:
+  tls:
+    - hosts:
+        - argocd.ipsitec.es
+      secretName: argocd-test-ing
+
+  rules:
+    - host: argocd.ipsitec.es
+      http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: argocd-test-svc
+                port:
+                  number: 80

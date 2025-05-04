@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: argocd-test-dp
+  labels:
+    app: argocd-test-app
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: argocd-test-app
+  template:
+    metadata:
+      labels:
+        app: argocd-test-app
+
+    spec:
+      containers:
+        - name: argocd-test-app
+          image: nginx:latest
+          ports:
+            - containerPort: 80
