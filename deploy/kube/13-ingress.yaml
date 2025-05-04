@@ -1,3 +1,4 @@
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 
@@ -5,7 +6,7 @@ metadata:
   name: argocd-test-ing
   annotations:
     spec.ingressClassName: traefic
-    cert-manager.io/issuer: argocd-test-issuer # TODO: change
+    cert-manager.io/issuer: argocd-test-issue
     traefic.ingress.kubernetes.io/router.tls: "true"
 
 spec:

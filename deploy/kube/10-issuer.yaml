@@ -1,0 +1,19 @@
+# just for testing
+---
+apiVersion: cert-manager.io/v1
+kind: Issuer
+
+metadata:
+  name: argocd-test-issuer
+
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: kennycallado@duck.com
+    privateKeySecretRef:
+      name: letsencrypt-prod
+
+    solvers:
+      - selector: {}
+        http01:
+          ingress: {}
