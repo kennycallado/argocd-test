@@ -3,7 +3,6 @@ kind: Deployment
 
 metadata:
   name: argocd-test-dp
-  namespace: argocd-test
   labels:
     app: argocd-test-app
 

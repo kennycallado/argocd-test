@@ -4,7 +4,6 @@ kind: Service
 
 metadata:
   name: argocd-test-svc
-  namespace: argocd-test
 
 spec:
   ports:
