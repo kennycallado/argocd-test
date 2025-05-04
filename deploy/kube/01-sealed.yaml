@@ -1,0 +1,23 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/namespace-wide: "true"
+  creationTimestamp: null
+
+  name: email
+  namespace: argocd-test
+
+spec:
+  template:
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/namespace-wide: "true"
+      creationTimestamp: null
+      name: email
+      namespace: argocd-test
+
+  encryptedData:
+    email: AgB0SB97rj+bZ6qc1iVCR0fXZrKRzUf3PZQvN1DQc1BJBPGFmTxdDC/zRT5nUsikSMcNnZSDqhyjwSyN5RHHY3bgeelW/JUYrb8iw+u1FZ76s5duI/hf2YYe1kdke2RRZoaAGpVMuJkVm2ji7BlZCyLSXbdViniYRmvmnjDRhWeZHwEsp0Ku491zAwd+8arVjd/gTK58lg5K3GaI5m0nEPcMpEb8QBM60PrPlRfrnDIrL9CL3QxbN1piiVAJGTEh7t4Qzzg7VBNjRXRCST97knKBFHHLsN8L5qxaT2YLlwYzd8GepV+zDS5lqO3y4G+kpfS/wT7ckw9OS8qNcYzPWI4PSBc1roaYA4F6zG6q38LcvfUz5sOxPSGiKs3DzYKUs4Epm52AxKeBNry9hbguqjh+3WMT/VrXgYqZ8sMmGvRCCQNaRf+FMIGgZ734MG6JUCitMdNJWwXWFSz9qVmX8LJJVQhAZTn9ExfIw9tIZyv65EgrookQ7Z9Em8lVn+IZdidkj+0zTHG1J/ovUey0YpuA/rl2ifIyI9HUJf52C+5My1qiRXDsB7DeP4kSCtwurWX2RaUnOLmATNnk+TSpiKk+9soHlxPA9MhozkxodVAqO6Di1jbCkBFCVajmHlJ9fmYnyfZa4cQNMFSkhuVTiEkoVthaSjaxU4lmcZsk6cz5yu6s29oAQKDdTX7CLE3Gp8AenTV8g6yPlemnQUIzMWVm
