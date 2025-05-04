@@ -3,6 +3,7 @@ kind: Ingress
 
 metadata:
   name: argocd-test-ing
+  namespace: argocd-test
   annotations:
     spec.ingressClassName: traefic
     cert-manager.io/issuer: webslab-issuer
