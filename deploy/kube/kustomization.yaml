@@ -1,3 +1,4 @@
+---
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
@@ -9,7 +10,15 @@ resources:
 
 namespace: argocd-test
 
-secretGenerator:
-  - name: secret-1
-    literals:
-      - issuerEmail=kennycallado@duck.com
+patches:
+  - target:
+      kind: Issuer
+      name: argocd-test-issuer
+    patch: |-
+      apiVersion: cert-manager.io/v1
+      kind: Issuer
+      metadata:
+        name: argocd-test-issuer
+      spec:
+        acme:
+          email: kennycallado@duck.com

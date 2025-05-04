@@ -8,7 +8,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: kennycallado@duck.com
+    email:
     privateKeySecretRef:
       name: letsencrypt-prod
 
